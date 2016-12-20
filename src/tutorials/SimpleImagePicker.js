@@ -38,7 +38,7 @@ export default {
                     <image-picker url="https://jsonplaceholder.typicode.com/photos?limit=10"
                     :items-adaptor="imagesAdaptor"
                     :item-adaptor="imageAdaptor"
-                    :selected="selected"
+                    :selected="selectedImage"
 @confirm="selectImage"
                     ref="imagePicker"></image-picker>
                 </div>
@@ -48,9 +48,6 @@ export default {
 
     data() {
         return{
-            selected: [ {
-                id: 6
-            } ],
 
             selectedImage: null,
 

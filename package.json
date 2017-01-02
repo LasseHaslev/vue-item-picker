@@ -1,7 +1,7 @@
 {
   "name": "@lassehaslev/vue-item-picker",
   "description": "Item picker logic for Vue.js v2",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "src/index.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "repository": {

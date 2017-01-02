@@ -1,23 +1,16 @@
 import BaseModal from '@lassehaslev/vue-modal';
 import CanSelectItems from './mixins/CanSelectItems';
-import HasItems from './mixins/HasItems';
+
+import BaseCrud from '@lassehaslev/vue-crud';
 
 export default {
-    mixins: [ BaseModal, CanSelectItems, HasItems ],
+    mixins: [ BaseModal, CanSelectItems, BaseCrud ],
 
     props: {
-        url: {
-            type: String,
-            default: null,
-        },
         autoclose: {
             type:Boolean,
             default: true,
         }
-    },
-
-    mounted() {
-        // this.open();
     },
 
     methods: {

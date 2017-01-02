@@ -4,26 +4,15 @@ export default {
     mixins: [ CanCheckItemSelected ],
 
     props: {
-        'picker-item': {
+        item: {
             type: Object,
             default:null,
         },
-        itemAdaptor: {
-            type: Function,
-            default( item ) {
-                return item;
-            }
-        },
         selected: {
-            default: [],
+            default() {
+                return [];
+            },
         },
-    },
-
-    computed: {
-        item() {
-            return this.itemAdaptor( this.pickerItem );
-        },
-
     },
 
     methods: {
@@ -31,7 +20,7 @@ export default {
             this.$emit( 'select', this.item );
         },
         confirm() {
-            this.$emit( 'confirm', this.pickerItem )
+            this.$emit( 'confirm', this.item )
         },
     },
 
